@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>  
   <properties>
     <abc.def>XYZ</abc.def>
-  <properties>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
