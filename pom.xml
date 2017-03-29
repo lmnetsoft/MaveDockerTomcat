@@ -1,0 +1,312 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.finantix.modules.pos.jp</groupId>
+	<artifactId>sharp-modules-pos.parent</artifactId>
+	<version>05.04.01</version>
+	<packaging>pom</packaging>
+	<name>Finantix POS Japan</name>
+	<organization>
+		<url>http://www.finantix.com</url>
+		<name>Finantix Pro</name>
+	</organization>
+	<licenses>
+		<license>
+			<name>Finantix Pro License</name>
+			<comments>
+				The use of the software contained herein is governed under the terms 
+				of the Studio License Agreement entered between Finantix and Client 
+				and all the amendments thereof.
+			</comments>
+		</license>
+	</licenses>
+	<scm>
+		<connection>scm:git:ssh://rad@git.it.fx.lan/project.manulife.modules.server.git</connection>
+		<url>http://git.it.fx.lan/tree/?r=project.manulife.modules.server&amp;f=</url>
+	</scm>
+	<issueManagement>
+		<system>Redmine</system>
+		<url>https://alm.finantix.com/projects/japan/issues</url>
+	</issueManagement>
+	<distributionManagement>
+		<site>
+			<id>rootURL</id>
+			<url>${site.url.location}</url>
+		</site>
+	</distributionManagement>
+	<developers>
+		<developer>
+			<name>Davide Zambon</name>
+			<email>davide.zambon@finantix.com</email>
+			<url>https://alm.finantix.com/users/dzambon</url>
+			<roles>
+				<role>Project TL</role>
+			</roles>
+		</developer>	
+	</developers>
+
+	<properties>
+		<!-- plugin's version -->
+		<tycho-version>0.22.0</tycho-version>
+		<tycho-extras-version>0.22.0</tycho-extras-version>
+		<mojo-version>1.0-alpha-2</mojo-version>
+		<sisu-version>0.3.3</sisu-version>
+
+		<!-- project's settings -->
+		<maven.compiler.target>1.6</maven.compiler.target>
+		<maven.compiler.source>1.6</maven.compiler.source>
+		<project.build.sourceEncoding>UTF8</project.build.sourceEncoding>
+
+		<!-- builder's settings -->
+		<platform.repo.url>${p2.repository}</platform.repo.url>
+		<tycho.scmUrl>scm:git:ssh://rad@git.it.fx.lan/project.manulife.modules.git</tycho.scmUrl>
+	</properties>
+
+	<profiles>
+		<profile>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<reporting>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>2.9.1</version>
+						<configuration>
+							<doctitle>NterpriseApps Sharp ${project.version}</doctitle>
+							<bottom><![CDATA[<i>Copyright &#169; ${copyright.period} Finantix Pro. All Rights Reserved.</i>]]></bottom>
+							<excludePackageNames>*.internal,*.test,org.orbeon.*,net.java.dev.*</excludePackageNames>
+							<links>
+								<link>http://download.oracle.com/javase/6/docs/api/</link>
+								<link>http://www.eclipse.org/eclipselink/api/2.4/</link>
+								<link>http://commons.apache.org/fileupload/apidocs/</link>
+								<link>http://commons.apache.org/dbcp/apidocs/</link>
+							</links>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.codehaus.enunciate</groupId>
+						<artifactId>maven-enunciate-plugin</artifactId>
+						<version>1.27</version>
+						<configuration>
+							<configFile>${enunciate.xml}</configFile>
+							<!-- The subdirectory of the site where the documentation will be put. -->
+							<!-- Note that if this isn't set, the documentation will overwrite the site. -->
+							<docsSubdir>wsdocs</docsSubdir>
+							<compileDebug>true</compileDebug>
+						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-project-info-reports-plugin</artifactId>
+						<version>2.7</version>				 
+						<configuration>
+						  <dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+						</configuration>
+					</plugin> 
+				</plugins>
+			</reporting>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.tycho.extras</groupId>
+						<artifactId>tycho-source-feature-plugin</artifactId>
+						<version>${tycho-extras-version}</version>
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>source-feature</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.eclipse.tycho</groupId>
+						<artifactId>tycho-source-plugin</artifactId>
+						<version>${tycho-extras-version}</version>
+						<executions>
+							<execution>
+								<goals>
+									<goal>plugin-source</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-project-info-reports-plugin</artifactId>
+						<version>2.7</version>
+					</plugin>
+				</plugins>
+			</build>
+			<modules>
+				<!-- ######################### TODO add here new modules ######################### -->
+				<module>com.finantix.pdf.core.resources</module>
+				<module>com.finantix.pdf.core</module>
+				<module>com.finantix.shared.core</module>
+				<module>com.finantix.core.core</module>
+				<module>com.finantix.agent.core</module>
+				<module>com.finantix.clientprofile.core</module>
+				<!-- ONLY USED IN HK
+				<module>com.finantix.clientprofile.ws</module>
+				 -->		
+				<module>com.finantix.clientprofile.ws.consumer</module>
+				<module>com.finantix.database.setup</module>
+				<module>com.finantix.policy.core</module>
+				<module>com.finantix.calendar.core</module>
+				<module>com.finantix.platform.starter</module>
+				<module>com.finantix.modules.starter</module>
+				<module>com.finantix.ml.authentication</module>
+				<module>com.finantix.catalogue.core</module>
+				<module>com.finantix.proposal.core</module>
+				<module>com.finantix.clientsync.core</module>
+				<module>com.finantix.cms.core</module>
+				<module>com.finantix.cms.core.jackrabbit</module>
+				<module>com.finantix.activitytracking.core</module>
+				<module>com.finantix.notification.core</module>
+				<module>com.finantix.batchimport</module>
+				<!-- ONLY USED IN HK
+				<module>com.finantix.batchexport</module>
+				 -->
+				<module>com.finantix.pdfservice.core</module>
+				<module>com.finantix.cms.webdav.browser</module>
+				<module>com.thedigitalstack.console</module>
+				<!-- ONLY USED IN HK 
+				<module>com.finantix.common.ui</module>
+				<module>com.finantix.cms.ui</module>
+				<module>com.finantix.catalogue.ui</module>
+				<module>com.finantix.notification.ui</module>
+				<module>com.finantix.audit.ui</module>
+				<module>com.finantix.ml.console.web</module>
+				 -->
+				<module>com.finantix.pdfform.core</module>
+				<module>com.finantix.application.core</module>
+				<module>com.finantix.search.templates</module>
+				<module>com.finantix.apply.batchimport</module>
+				<module>com.finantix.ml.apply.web</module>
+				<module>com.finantix.application.ws</module>
+				<module>com.finantix.application.ws.consumer</module>
+				<module>com.finantix.ml.restful.basic_auth</module>
+				<!-- ######################### END add here new modules ######################### -->
+			</modules>
+			
+		</profile>
+	</profiles>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+				<version>${mojo-version}</version>
+				<executions>
+					<execution>
+						<id>build.properties</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>read-project-properties</goal>
+						</goals>
+						<configuration>
+							<files>
+								<file>${build.properties}</file>
+							</files>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-compiler-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<compilerArgs>
+						<compilerArg>-err:-forbidden</compilerArg>
+					</compilerArgs>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-packaging-plugin</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<sourceReferences>
+						<generate>true</generate>
+					</sourceReferences>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.eclipse.tycho.extras</groupId>
+						<artifactId>tycho-sourceref-jgit</artifactId>
+						<version>${tycho-extras-version}</version>
+					</dependency>
+				</dependencies>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho-version}</version>
+				<configuration>
+					<environments>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-versions-plugin</artifactId>
+				<version>${tycho-version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.sisu</groupId>
+				<artifactId>sisu-maven-plugin</artifactId>
+				<version>${sisu-version}</version>
+				<executions>
+					<execution>
+						<id>index-project</id>
+						<goals>
+							<goal>main-index</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+ 
+	<dependencies>
+		<dependency>
+			<groupId>org.codehaus.enunciate</groupId>
+			<artifactId>enunciate-rt</artifactId>
+			<version>1.27</version>
+		</dependency>
+	</dependencies>
+	
+	<repositories>
+		<repository>
+			<id>platform</id>
+			<layout>p2</layout>
+			<url>${platform.repo.url}</url>
+		</repository>
+	</repositories>
+</project>
