@@ -20,24 +20,27 @@
   </dependencies>
 
   <build>
+
+	  
 <plugins>
-     
+    <plugin>
+           <groupId>com.google.code.maven-replacer-plugin</groupId>
+           <artifactId>replacer</artifactId>
+           <version>1.5.2</version>
+           <configuration>
+               <file>pom.xml</file>
+               <replacements>
+                   <replacement>
+                       <token>${version}</token>
+                       <value>${replacer.version}</value>
+                   </replacement>         
+               </replacements>
+           </configuration>
+        </plugin>   
 
-<plugin>
- <groupId>org.apache.tomcat.maven</groupId>
- <artifactId>tomcat7-maven-plugin</artifactId>
- <version>2.2</version>
- <configuration>
-  <url>http://localhost:8091/manager/text</url>
-  <server>TomcatServer</server>
-  <path>/sample</path>
-  <username>craig</username>
-  <password>password</password>
- </configuration>
-</plugin>
-
-
-</plugins>
+<plugin>	  
+	  
+	  
 	<finalName>MavenProjectTest</finalName>
   </build>
 </project>
