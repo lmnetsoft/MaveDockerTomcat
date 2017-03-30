@@ -141,56 +141,7 @@
 					</plugin>
 				</plugins>
 			</build>
-			<modules>
-				<!-- ######################### TODO add here new modules ######################### -->
-				<module>com.finantix.pdf.core.resources</module>
-				<module>com.finantix.pdf.core</module>
-				<module>com.finantix.shared.core</module>
-				<module>com.finantix.core.core</module>
-				<module>com.finantix.agent.core</module>
-				<module>com.finantix.clientprofile.core</module>
-				<!-- ONLY USED IN HK
-				<module>com.finantix.clientprofile.ws</module>
-				 -->		
-				<module>com.finantix.clientprofile.ws.consumer</module>
-				<module>com.finantix.database.setup</module>
-				<module>com.finantix.policy.core</module>
-				<module>com.finantix.calendar.core</module>
-				<module>com.finantix.platform.starter</module>
-				<module>com.finantix.modules.starter</module>
-				<module>com.finantix.ml.authentication</module>
-				<module>com.finantix.catalogue.core</module>
-				<module>com.finantix.proposal.core</module>
-				<module>com.finantix.clientsync.core</module>
-				<module>com.finantix.cms.core</module>
-				<module>com.finantix.cms.core.jackrabbit</module>
-				<module>com.finantix.activitytracking.core</module>
-				<module>com.finantix.notification.core</module>
-				<module>com.finantix.batchimport</module>
-				<!-- ONLY USED IN HK
-				<module>com.finantix.batchexport</module>
-				 -->
-				<module>com.finantix.pdfservice.core</module>
-				<module>com.finantix.cms.webdav.browser</module>
-				<module>com.thedigitalstack.console</module>
-				<!-- ONLY USED IN HK 
-				<module>com.finantix.common.ui</module>
-				<module>com.finantix.cms.ui</module>
-				<module>com.finantix.catalogue.ui</module>
-				<module>com.finantix.notification.ui</module>
-				<module>com.finantix.audit.ui</module>
-				<module>com.finantix.ml.console.web</module>
-				 -->
-				<module>com.finantix.pdfform.core</module>
-				<module>com.finantix.application.core</module>
-				<module>com.finantix.search.templates</module>
-				<module>com.finantix.apply.batchimport</module>
-				<module>com.finantix.ml.apply.web</module>
-				<module>com.finantix.application.ws</module>
-				<module>com.finantix.application.ws.consumer</module>
-				<module>com.finantix.ml.restful.basic_auth</module>
-				<!-- ######################### END add here new modules ######################### -->
-			</modules>
+			
 			
 		</profile>
 	</profiles>
