@@ -4,7 +4,7 @@
   <groupId>313113</groupId>
   <artifactId>MavenProjectTest</artifactId>
   <packaging>war</packaging>
-  <version>123</version>
+  <buildversion>123</buildversion>
   <name>MavenProjectTest Maven Webapp</name>
   <url>http://maven.apache.org</url>  
   <properties>
@@ -32,8 +32,8 @@
                <file>pom.xml</file>
                <replacements>
                    <replacement>
-                       <token>${version}</token>
-                       <value>${replacer.version}</value>
+                       <token>${buikdversion}</token>
+                       <value>${replacer.buildversion}</value>
                    </replacement>         
                </replacements>
            </configuration>
