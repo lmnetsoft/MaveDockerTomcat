@@ -32,7 +32,7 @@
                <file>pom.xml</file>
                <replacements>
                    <replacement>
-                       <token>${buikdversion}</token>
+                       <token>${buildversion}</token>
                        <value>${replacer.buildversion}</value>
                    </replacement>         
                </replacements>
