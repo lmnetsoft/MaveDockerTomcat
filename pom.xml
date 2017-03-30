@@ -245,14 +245,7 @@
 		</plugins>
 	</build>
  
-	<dependencies>
-		<dependency>
-			<groupId>org.codehaus.enunciate</groupId>
-			<artifactId>enunciate-rt</artifactId>
-			<version>1.27</version>
-		</dependency>
-	</dependencies>
-	
+		
 	<repositories>
 		<repository>
 			<id>platform</id>
