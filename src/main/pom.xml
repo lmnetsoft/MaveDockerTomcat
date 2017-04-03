@@ -5,7 +5,7 @@
   <groupId>313113</groupId>
   <artifactId>MavenProjectTest</artifactId>
   <packaging>war</packaging>
-  <version>123</version>
+  <version>{MYVER}</version>
   <name>MavenProjectTest Maven Webapp</name>
   <url>http://maven.apache.org</url>  
   <properties>
