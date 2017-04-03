@@ -1,0 +1,10 @@
+<project>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.foo.bar</groupId>
+    <artifactId>bar</artifactId>
+    <version>1.0</version>
+  </parent>
+
+  <artifactId>bar-child</artifactId>
+</project>
