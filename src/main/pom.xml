@@ -22,9 +22,10 @@
   </dependencies>
 
  <scm>
-    <developerConnection>scm:svn:https://svn.mycompany.com/repos/myapplication/trunk/mycomponent/</developerConnection>
-  </scm> 
-  
+     <connection>scm:git:https://github.com/lmnetsoft/MaveDockerTomcat.git</connection>	 
+     <url>https://github.com/lmnetsoft/MaveDockerTomcat</url>
+     <developerConnection>scm:git:https://github.com/lmnetsoft/MaveDockerTomcat.git</developerConnection>     	
+ </scm>  
   
   <build>
   
