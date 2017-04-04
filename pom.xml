@@ -2,23 +2,42 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.foo.bar</groupId>
-  <artifactId>bar</artifactId>
-  <version>2.0</version>
+  <groupId>com.finantix.modules.pos.jp</groupId>
+  <artifactId>sharp-modules-pos.parent</artifactId>
+  <version>05.04.01</version>
   <packaging>pom</packaging>
 
   <scm>
-     <connection>scm:git:https://github.com/lmnetsoft/MaveDockerTomcat.git</connection>	 
-     <url>https://github.com/lmnetsoft/MaveDockerTomcat</url>
-     <developerConnection>scm:git:https://github.com/lmnetsoft/MaveDockerTomcat.git</developerConnection>     	
+     <connection>scm:git:https://github.com/hatnguyen/ChangePom.git</connection>	 
+     <url>https://github.com/hatnguyen/ChangePom</url>
+     <developerConnection>https://github.com/hatnguyen/ChangePom.git</developerConnection>     	
   </scm> 
-  <plugins>
-            <plugin> 
-                                <groupId>org.codehaus.mojo</groupId> 
-                                <artifactId>versions-maven-plugin</artifactId> 
-                                <version>2.3</version> 
-                               
-              </plugin> 
-    </plugins> 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-release-plugin</artifactId>
+        <version>2.5.3</version>
+      </plugin>
+
+      <plugin> 
+        <groupId>org.codehaus.mojo</groupId> 
+        <artifactId>versions-maven-plugin</artifactId> 
+        <version>2.3</version> 
+        <configuration> 
+            <includes> 
+               <include>com.finantix.itau</include> 
+            </includes> 
+        </configuration> 
+      </plugin> 
+
+
+    </plugins>
+   </build>
+
+   <modules>
+       <module>com.finantix.activitytracking.core</module>
+   </modules>
+
 
 </project>
