@@ -8,10 +8,10 @@
   <packaging>pom</packaging>
 
   <scm>
-     <connection>scm:git:https://github.com/hatnguyen/ChangePom.git</connection>	 
-     <url>https://github.com/hatnguyen/ChangePom</url>
-     <developerConnection>https://github.com/hatnguyen/ChangePom.git</developerConnection>     	
-  </scm> 
+     <connection>scm:git:https://github.com/lmnetsoft/MaveDockerTomcat.git</connection>	 
+     <url>https://github.com/lmnetsoft/MaveDockerTomcat</url>
+     <developerConnection>scm:git:https://github.com/lmnetsoft/MaveDockerTomcat.git</developerConnection>     	
+  </scm>
   <build>
     <plugins>
       <plugin>
@@ -36,7 +36,7 @@
    </build>
 
    <modules>
-       <module>com.finantix.activitytracking.core</module>
+       <module>bar-child</module>
    </modules>
 
 
