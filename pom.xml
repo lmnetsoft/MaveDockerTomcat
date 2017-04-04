@@ -6,10 +6,12 @@
   <artifactId>bar</artifactId>
   <version>2.0</version>
   <packaging>pom</packaging>
- <modules>		 
- <module>bar-child</module>		
+ 
+  <modules>		 
+         <module>bar-child</module>		
  </modules>
-   <scm>
+  
+  <scm>
      <connection>scm:git:https://github.com/lmnetsoft/MaveDockerTomcat.git</connection>	 
      <url>https://github.com/lmnetsoft/MaveDockerTomcat</url>
      <developerConnection>scm:git:https://github.com/lmnetsoft/MaveDockerTomcat.git</developerConnection>     	
