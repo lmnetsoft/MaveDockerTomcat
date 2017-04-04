@@ -8,7 +8,7 @@
   <packaging>pom</packaging>
 <module>
   
-<module>  bar-child</module>
+<module>bar-child</module>
   
 </module>
    <scm>
