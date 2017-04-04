@@ -7,9 +7,7 @@
   <version>2.0</version>
   <packaging>pom</packaging>
 <module>
-  
 <module>bar-child</module>
-  
 </module>
    <scm>
      <connection>scm:git:https://github.com/lmnetsoft/MaveDockerTomcat.git</connection>	 
