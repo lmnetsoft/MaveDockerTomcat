@@ -1,10 +1,14 @@
-<project>
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>com.foo.bar</groupId>
-    <artifactId>bar</artifactId>
-    <version>1.0</version>
-  </parent>
-
-  <artifactId>bar-child</artifactId>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>com.finantix.activitytracking.core</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>activitytracking.core</name>
+	<parent>
+		<groupId>com.finantix.modules.pos.jp</groupId>
+		<artifactId>sharp-modules-pos.parent</artifactId>
+		<version>05.04.01</version>
+	</parent>
 </project>
+
+
