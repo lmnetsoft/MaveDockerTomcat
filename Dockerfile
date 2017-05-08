@@ -6,4 +6,3 @@ ADD tomcat-users.xml /usr/local/tomcat/conf/
 #This is second lines adding
 #This is third lines adding
 #This is the fourth adding
-#This is the fiveth adding
